@@ -1,0 +1,39 @@
+<script src="jquery-1.7.2.min.js"></script>
+<script>
+$( document ).ready(function() {
+	var locked = true;
+	$("body").keypress(function( event ) {
+		if(event.charCode==49 && !locked)
+		{
+			$("body").css("background-color", "red");
+			locked = true;
+		}
+		if(event.charCode==50)
+		{
+			$("body").css("background-color", "black");
+			locked = false
+		}
+		if(event.charCode==51 && !locked)
+		{
+			$("body").css("background-color", "green");
+			locked = true;
+		}
+		if(event.charCode==52 && !locked)
+		{
+			$("body").css("background-color", "blue");
+			locked = true;
+		}
+		if(event.charCode==48)
+		{
+			$("body").css("background-color", "white");
+			locked = true
+		}
+		console.log(event.charCode);
+	});
+});
+</script>
+
+
+
+<body>
+</body>
